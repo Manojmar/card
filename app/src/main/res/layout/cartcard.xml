@@ -9,7 +9,6 @@
             type="Modal" />
     </data>
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"

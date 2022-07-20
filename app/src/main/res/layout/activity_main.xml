@@ -18,3 +18,4 @@
         android:scrollbars="none"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
