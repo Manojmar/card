@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.example.ticket.Modal"/>
+        <variable
+            name="dataa"
+            type="Modal" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#f8fbfb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.vipulasri.ticketview.TicketView
+                android:id="@+id/ticketView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerPadding="0dp"
+                app:ticketDividerType="dash"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ticketOrientation="horizontal"
+                app:ticketScallopPositionPercent="50"
+                app:ticketScallopRadius="20dp"
+                app:ticketBackgroundColor="@color/white"
+                app:ticketCornerRadius="10dp"
+                app:ticketCornerType="rounded"
+                app:ticketElevation="3dp" />
+
+            <View
+                android:id="@+id/nameview"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:background="#7dd9aa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="28dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="22dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="15dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="50dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="10dp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.name}"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guide"
+                app:layout_constraintTop_toTopOf="@+id/guide2" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{dataa.title}"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guide1"
+                app:layout_constraintStart_toStartOf="@+id/guide"
+                app:layout_constraintTop_toBottomOf="@id/text1" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                app:layout_constraintBottom_toBottomOf="@+id/text1"
+                app:layout_constraintEnd_toStartOf="@+id/guide6"
+                app:layout_constraintTop_toTopOf="@+id/text1" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="#f2f4f7"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text2"
+                app:layout_constraintStart_toStartOf="@id/guide"
+                app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_airplanemode_active_24"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toStartOf="@+id/guide1"
+                app:layout_constraintStart_toStartOf="@+id/guide"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.des}"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/guide"/>
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.place}"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guide"
+                app:layout_constraintTop_toBottomOf="@+id/one" />
+
+            <TextView
+                android:id="@+id/service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.arival}"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/one"
+                app:layout_constraintEnd_toEndOf="@id/guide5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.depcture}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/two"
+                app:layout_constraintEnd_toEndOf="@id/guide5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/guide3"
+                app:layout_constraintStart_toStartOf="@id/guide"
+                android:background="@drawable/shape"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_airplanemode_active_24"
+                    android:drawablePadding="5dp"
+                    android:text="@{dataa.where}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65 coins"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/text3"
+                    app:layout_constraintStart_toEndOf="@id/text3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataa.amount}"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/guide3"
+                app:layout_constraintEnd_toStartOf="@+id/guide1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
