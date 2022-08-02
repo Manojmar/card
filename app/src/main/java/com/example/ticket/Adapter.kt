@@ -10,6 +10,7 @@ class Adapter(var data:List<Modal>): RecyclerView.Adapter<Adapter.ViewHolder>() 
     class ViewHolder(val cartcardBinding: CartcardBinding): RecyclerView.ViewHolder(cartcardBinding.root) {
         fun bind(data: Modal){
             cartcardBinding.dataa=data
+            cartcardBinding.executePendingBindings()
         }
     }
 

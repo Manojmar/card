@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:fillViewport="true"
+    tools:context=".Meet">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backimg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#e6e6e6"
+                app:strokeWidth="3dp">
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottomsheet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backimg">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="14dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="16dp" />
+
+                <View
+                    android:id="@+id/imgview"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/view"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toTopOf="@id/layout2" />
+
+                <TextView
+                    android:id="@+id/sService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Service Starting"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/imgview" />
+
+                <TextView
+                    android:id="@+id/fFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="from"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/sService" />
+
+                <TextView
+                    android:id="@+id/sServiceamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 999"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/fFrom"
+                    app:layout_constraintStart_toEndOf="@+id/fFrom" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bBookservice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Service"
+                    android:backgroundTint="@color/button"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fFrom"
+                    app:layout_constraintEnd_toStartOf="@+id/guide1"
+                    app:layout_constraintTop_toTopOf="@+id/sService" />
+
+                <View
+                    android:id="@+id/bBookserviceview"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/bBookservice" />
+
+                <TextView
+                    android:id="@+id/aAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/bBookserviceview"
+                    android:text="About Meet &amp; Assist"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/guide"/>
+
+                <TextView
+                    android:id="@+id/aAboutpara"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/aAbout"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+                <View
+                    android:id="@+id/aAboutview"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/aAboutpara" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    app:layout_constraintEnd_toStartOf="@+id/guide1"
+                    app:layout_constraintStart_toStartOf="@+id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/aAboutview">
+
+                    <TextView
+                        android:id="@+id/aAvailableservice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/black"
+                        android:text="Who can available this service"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/aAvailableservicerec"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/aAvailableservice" />
+
+                    <View
+                        android:id="@+id/aAvailableserviceview"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/aAvailableservicerec" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/wServicegiven"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:text="Where the service is given"
+                    app:layout_constraintTop_toBottomOf="@id/layout3"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/wServicegivenimg"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@+id/wServicegiven" />
+
+                <TextView
+                    android:id="@+id/sServiceinclude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Service Included"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/wServicegivenimg"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sServiceincludepara"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/sServiceinclude"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"/>
+
+                <TextView
+                    android:id="@+id/pPatner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Our elite Patners"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/sServiceincludepara"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pPatnerrec"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/pPatner"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"/>
+
+                <ImageView
+                    android:id="@+id/hHowitimg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/pPatnerrec"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bookservice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button"
+                    android:text="Let's book a Service"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:cornerRadius="8dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/hHowitimg"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    />
+
+                <View
+                    android:id="@+id/bButtonview"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide"
+                    app:layout_constraintTop_toBottomOf="@id/bookservice"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+

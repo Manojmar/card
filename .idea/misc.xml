@@ -3,17 +3,49 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/aboutshape.xml" value="0.1" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/bordershape.xml" value="0.141" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/bottomsheet.xml" value="0.1" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/checkbox.xml" value="0.1525" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/checkoutshape.xml" value="0.129" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/circleimg.xml" value="0.162" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/countshape.xml" value="0.135" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/dotcheckout.xml" value="0.12" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/flowercardshape.xml" value="0.1055" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/homecardshape.xml" value="0.1" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/ic_close_1x.xml" value="0.129" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/ic_coin_1x.xml" value="0.1105" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/service.xml" value="0.2425" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/serviceshape.xml" value="0.1585" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/shape.xml" value="0.1" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/text.xml" value="0.2235" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/text1.xml" value="0.2235" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/drawable/text2.xml" value="0.2235" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/about.xml" value="0.3553846153846154" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/about_card.xml" value="0.3448275862068966" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/activity_main.xml" value="0.30277777777777776" />
-        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/cartcard.xml" value="0.33" />
-        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/homecard.xml" value="0.5" />
-        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/servicecard.xml" value="0.33" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/activity_meet.xml" value="0.18" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/add_new_passanger.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/bokey_vcard.xml" value="0.2796296296296296" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/cartcard.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/checkout.xml" value="0.33" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/fragment_bokey.xml" value="0.22861842105263158" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/fragment_plazama_.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/fragment_revbiew_.xml" value="0.1" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/fragment_service.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/homecard.xml" value="0.25" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/plazama_card.xml" value="0.3609375" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/review_card.xml" value="0.33" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/searchcard.xml" value="0.5" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/searchcard2.xml" value="0.43548387096774194" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/service.xml" value="0.33" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/service1.xml" value="0.22894736842105262" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/serviceavailable.xml" value="0.18" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/servicecard.xml" value="0.271484375" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/servicecard22.xml" value="0.33" />
+        <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/servicefragmentcard.xml" value="0.25" />
         <entry key="..\:/Users/serve/AndroidStudioProjects/Ticket/app/src/main/res/layout/three.xml" value="0.3614583333333333" />
       </map>
     </option>

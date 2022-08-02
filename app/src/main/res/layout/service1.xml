@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="12dp" />
+
+
+    <TextView
+        android:id="@+id/cCardpackagename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silver Package"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cCardamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 1,000"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cCardpackagename"
+        app:layout_constraintEnd_toStartOf="@+id/guide1" />
+
+    <TextView
+        android:id="@+id/cCardpersoncount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="2 Adults"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintTop_toBottomOf="@+id/cCardpackagename" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@color/view"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardpersoncount"
+        app:layout_constraintStart_toEndOf="@id/cCardpersoncount"
+        app:layout_constraintTop_toTopOf="@+id/cCardpersoncount" />
+
+    <TextView
+        android:id="@+id/cCardearn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=" Earn"
+        app:drawableStartCompat="@drawable/ic_coin_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardpersoncount"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/cCardpersoncount" />
+
+    <TextView
+        android:id="@+id/cCardmilescount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardearn"
+        app:layout_constraintStart_toEndOf="@id/cCardearn"
+        app:layout_constraintTop_toTopOf="@+id/cCardearn" />
+
+    <TextView
+        android:id="@+id/cCardmiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="miles"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardmilescount"
+        app:layout_constraintStart_toEndOf="@id/cCardmilescount"
+        app:layout_constraintTop_toTopOf="@+id/cCardmilescount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

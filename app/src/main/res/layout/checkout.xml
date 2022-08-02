@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/cCheckoutimg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ic_tick_blue_1x"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/cDashimage"
+        android:layout_width="120dp"
+        android:layout_height="5dp"
+        android:layerType="software"
+        android:src="@drawable/checkoutshape"
+        app:layout_constraintBottom_toBottomOf="@+id/cCheckoutimg"
+        app:layout_constraintStart_toEndOf="@id/cCheckoutimg"
+        app:layout_constraintTop_toTopOf="@+id/cCheckoutimg" />
+
+
+    <ImageView
+        android:id="@+id/cUncheckimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_tick_blue_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cDashimage"
+        app:layout_constraintStart_toEndOf="@id/cDashimage"
+        app:layout_constraintTop_toTopOf="@+id/cDashimage" />
+
+    <TextView
+        android:id="@+id/cPassenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passenger details"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cCheckoutimg"
+        app:layout_constraintStart_toStartOf="@+id/cCheckoutimg"
+        app:layout_constraintTop_toBottomOf="@+id/cCheckoutimg" />
+
+    <TextView
+        android:id="@+id/cOtherdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other details"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cUncheckimg"
+        app:layout_constraintStart_toStartOf="@+id/cUncheckimg"
+        app:layout_constraintTop_toBottomOf="@+id/cUncheckimg" />
+
+    <TextView
+        android:id="@+id/cContactpassenger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="Contact Passenger Details"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/cPassenger" />
+
+    <TextView
+        android:id="@+id/cContactpassengerhint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:text="All calls and message will be delivered to this passenger"
+        app:layout_constraintTop_toBottomOf="@id/cContactpassenger"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cContactbtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/button"
+       app:cornerRadius="8dp"
+        android:textAllCaps="false"
+        android:textColor="@color/button"
+        android:layout_height="wrap_content"
+        android:text="Add contact passenger"
+        app:layout_constraintTop_toBottomOf="@+id/cContactpassengerhint"
+       app:layout_constraintStart_toStartOf="@id/guide" />
+
+    <TextView
+        android:id="@+id/cOther"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Other Passenger Details"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@id/cContactbtn"/>
+
+    <TextView
+        android:id="@+id/cOtherpassenger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:text="Enter the details of other passengers "
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintTop_toBottomOf="@+id/cOther" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cOtherbtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/button"
+        app:cornerRadius="8dp"
+        android:textColor="@color/button"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:text="Add passengers"
+        app:layout_constraintTop_toBottomOf="@+id/cOtherpassenger"
+        app:layout_constraintStart_toStartOf="@id/guide" />
+
+    <View
+        android:id="@+id/cPassengerview"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/view"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cOtherbtn"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+    <TextView
+        android:id="@+id/cGreeterdetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Greeter / Family Contact Details"
+        android:layout_marginTop="23dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cPassengerview"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+    <TextView
+        android:id="@+id/cGreeterpassenger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:text="Help us reach your dear ones and keep them informed "
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintTop_toBottomOf="@+id/cGreeterdetail" />
+
+    <ImageView
+        android:id="@+id/cGreeterhintimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_info_1x"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/guide"
+        app:layout_constraintTop_toBottomOf="@id/cGreeterpassenger"/>
+
+    <TextView
+        android:id="@+id/cGreeterhint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Greeter/Family contact should not be in your passenger list"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cGreeterhintimg"
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toEndOf="@+id/cGreeterhintimg"
+        app:layout_constraintTop_toTopOf="@+id/cGreeterhintimg" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cGreeterbtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/button"
+        app:cornerRadius="8dp"
+        android:textColor="@color/button"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:text="Add greeter / family contact"
+        app:layout_constraintTop_toBottomOf="@+id/cGreeterhint"
+        app:layout_constraintStart_toStartOf="@id/guide" />
+
+    <View
+        android:id="@+id/cGreeterview"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/view"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cGreeterbtn"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+    <TextView
+        android:id="@+id/cUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Upload E-Ticket"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintTop_toBottomOf="@+id/cGreeterview"/>
+
+    <TextView
+        android:id="@+id/cUploadhint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:text="Upload your flight ticket in PDF format"
+        app:layout_constraintTop_toBottomOf="@id/cUpload"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintStart_toStartOf="@id/guide"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cUploadbtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/button"
+        app:cornerRadius="8dp"
+        android:textColor="@color/button"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:text="Upload E-Ticket"
+        app:layout_constraintTop_toBottomOf="@+id/cUploadhint"
+        app:layout_constraintStart_toStartOf="@id/guide" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:backgroundTint="@color/floating"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/cUploadbtn"
+        android:src="@drawable/ic_next_1x"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

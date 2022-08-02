@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".bokey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sFlowerservicerootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/sFlowerserviceneed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="When do you need the service?"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/end"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sFlowerserviceneedhintimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_1x"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/sFlowerserviceneed" />
+
+        <TextView
+            android:id="@+id/sFlowerserviceneedhint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="The displayed date and time are on the local timezone of
+the Airport location."
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/sFlowerserviceneedhintimg"
+            app:layout_constraintEnd_toEndOf="@+id/end"
+            app:layout_constraintTop_toTopOf="@+id/sFlowerserviceneedhintimg" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sFlowerservicedatelayout"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/serviceshape"
+            app:layout_constraintEnd_toStartOf="@+id/center"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/sFlowerserviceneedhint" >
+
+            <ImageView
+                android:id="@+id/sFlowersevicedatepicker"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_calendar_1x"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/sFlowersevicedatepickerCenterview"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sFlowersevicedatepicker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sFlowersevicedatepickertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Date"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/sFlowersevicedatepickerCenterview"
+                app:layout_constraintTop_toTopOf="@+id/sFlowersevicedatepickerCenterview" />
+
+            <EditText
+                android:id="@+id/cFlowersevicedatepickeredittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/sFlowersevicedatepickertextview"
+                app:layout_constraintTop_toBottomOf="@+id/sFlowersevicedatepickertextview"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sFlowerservicetimelayout"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/serviceshape"
+            app:layout_constraintBottom_toBottomOf="@+id/sFlowerservicedatelayout"
+            app:layout_constraintEnd_toStartOf="@+id/end"
+            app:layout_constraintStart_toStartOf="@+id/center"
+            app:layout_constraintTop_toTopOf="@+id/sFlowerservicedatelayout" >
+
+            <ImageView
+                android:id="@+id/sFlowerservicetimepicker"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_time_1x"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/sFlowerservicetimeCenterview"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:background="@color/view"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicetimepicker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sFlowerservicetimetextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Avail Time"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicetimeCenterview"
+                app:layout_constraintTop_toTopOf="@+id/sFlowerservicetimeCenterview" />
+
+            <EditText
+                android:id="@+id/sFlowerservicetimeedittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicetimeCenterview"
+                app:layout_constraintTop_toBottomOf="@+id/sFlowerservicetimetextview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/sFlowerserviceflower"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Flowers"
+            android:layout_marginTop="30dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toBottomOf="@+id/sFlowerservicetimelayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sFlowerservicerecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sFlowerserviceflower"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"/>
+
+        <ImageView
+            android:id="@+id/sFlowerservicecancelimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toBottomOf="@id/sFlowerservicerecyclerview"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sFlowerservicetermslayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toBottomOf="@id/sFlowerservicecancelimage">
+
+            <CheckBox
+                android:id="@+id/sFlowerservicecheckbox"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/checkbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sFlowerserviceagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/sFlowerservicecheckbox"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicecheckbox" />
+
+            <TextView
+                android:id="@+id/sFlowerserviceterms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms And Conditions,"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/sFlowerserviceagree"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerserviceagree" />
+
+            <TextView
+                android:id="@+id/sFlowerservicepolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/sFlowerserviceterms"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerserviceterms" />
+
+            <TextView
+                android:id="@+id/sFlowerserviceand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="and"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sFlowerservicepolicy"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicepolicy" />
+
+            <TextView
+                android:id="@+id/sFlowerservicecancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancellation Policy"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="@+id/sFlowerserviceagree"
+                app:layout_constraintTop_toBottomOf="@+id/sFlowerserviceagree" />
+
+            <TextView
+                android:id="@+id/sFlowerservicepolicyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="of Prannam"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sFlowerservicecancel"
+                app:layout_constraintStart_toEndOf="@+id/sFlowerservicecancel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sFlowerservicebutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/floating"
+            android:text="Add to cart"
+            android:textAllCaps="false"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/sFlowerservicetermslayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

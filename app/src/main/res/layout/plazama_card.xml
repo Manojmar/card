@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cServiceloungecard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/serviceshape">
+
+    <TextView
+        android:id="@+id/cServiceloungehour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="2 hrs"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/cServiceloungeview"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@color/view"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungehour"
+        app:layout_constraintStart_toEndOf="@+id/cServiceloungehour"
+        app:layout_constraintTop_toTopOf="@+id/cServiceloungehour" />
+
+    <TextView
+        android:id="@+id/cServiceloungeearn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=" Earn"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_coin_1x"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cServiceloungehour"
+        app:layout_constraintStart_toEndOf="@+id/cServiceloungeview" />
+
+    <TextView
+        android:id="@+id/cServiceloungemilescount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="10"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungeearn"
+        app:layout_constraintStart_toEndOf="@id/cServiceloungeearn"
+        app:layout_constraintTop_toTopOf="@+id/cServiceloungeearn" />
+
+    <TextView
+        android:id="@+id/cCardmiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="miles"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungemilescount"
+        app:layout_constraintStart_toEndOf="@id/cServiceloungemilescount"
+        app:layout_constraintTop_toTopOf="@+id/cServiceloungemilescount" />
+
+    <TextView
+        android:id="@+id/cServiceloungeamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="₹ 1,500"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardmiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cCardmiles" />
+
+    <TextView
+        android:id="@+id/cServiceloungeneedhintimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:drawableStart="@drawable/ic_info_1x"
+        android:text="Fully Booked"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cServiceloungehour"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungehour" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

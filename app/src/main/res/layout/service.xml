@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/serviceshape"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="14dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="15dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cCardimage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/two"
+        app:layout_constraintTop_toTopOf="@id/guide2"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/view"/>
+
+    <TextView
+        android:id="@+id/cCardname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Paranaam"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/cCardimage"
+        app:layout_constraintTop_toTopOf="@+id/cCardimage" />
+
+    <TextView
+        android:id="@+id/cCardservicename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meet and Greet"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardimage"
+        app:layout_constraintStart_toEndOf="@+id/cCardimage" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/view"
+        app:layout_constraintBottom_toBottomOf="@+id/cCardservicename"
+        app:layout_constraintStart_toEndOf="@+id/cCardservicename"
+        app:layout_constraintTop_toTopOf="@+id/cCardservicename" />
+
+    <TextView
+        android:id="@+id/cCardservicetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="16:45(GMT+1)"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/cCardcloseimg"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_close_1x"
+        app:layout_constraintTop_toTopOf="@id/guide2"
+        app:layout_constraintEnd_toEndOf="@id/guide1"/>
+
+    <ImageView
+        android:id="@+id/cCardeditimg"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_edit_1x"
+        app:layout_constraintTop_toTopOf="@id/guide2"
+        app:layout_constraintEnd_toStartOf="@id/cCardcloseimg"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="15dp"
+        android:id="@+id/cServicerecyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/cCardservicename"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="@id/guide1"
+        app:layout_constraintBottom_toBottomOf="@id/guide3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

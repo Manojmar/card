@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".plazama_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aserviceloungeRootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/cServiceloungepassenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passenger"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cServiceloungeadult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adults"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungepassenger" />
+
+    <TextView
+        android:id="@+id/cServiceloungeadultrestriction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 years and above"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeadult" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cServiceloungeadultcountadd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/countshape"
+        android:drawableStart="@drawable/ic_add_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungeadultrestriction"
+        app:layout_constraintEnd_toEndOf="@id/end" />
+
+    <TextView
+        android:id="@+id/Serviceloungeadultcountshow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungeadultcountadd"
+        app:layout_constraintEnd_toStartOf="@+id/cServiceloungeadultcountadd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cServiceloungeadultcountminus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/countshape"
+        android:drawableEnd="@drawable/ic_minus_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungeadultrestriction"
+        app:layout_constraintEnd_toStartOf="@+id/Serviceloungeadultcountshow" />
+
+    <View
+        android:id="@+id/cServiceloungeview"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeadultrestriction" />
+
+    <TextView
+        android:id="@+id/cServiceloungeChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Child"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeview" />
+
+    <TextView
+        android:id="@+id/cServiceloungechildrestriction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="12 years and above"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeChild" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cServiceloungechildcountadd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/countshape"
+        android:drawableStart="@drawable/ic_add_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungechildrestriction"
+        app:layout_constraintEnd_toStartOf="@+id/end" />
+
+    <TextView
+        android:id="@+id/Serviceloungechildcountshow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungechildcountadd"
+        app:layout_constraintEnd_toStartOf="@+id/cServiceloungechildcountadd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cServiceloungechildcountminus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/countshape"
+        android:drawableEnd="@drawable/ic_minus_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungechildrestriction"
+        app:layout_constraintEnd_toStartOf="@+id/Serviceloungechildcountshow" />
+
+    <TextView
+        android:id="@+id/cServiceloungeneed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="When do you need the service?"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/end"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungechildrestriction" />
+
+    <ImageView
+        android:id="@+id/cServiceloungeneedhintimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_info_1x"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeneed" />
+
+    <TextView
+        android:id="@+id/cServiceloungeneedhint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="The displayed date and time are on the local timezone of
+the Airport location."
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/cServiceloungeneedhintimg"
+        app:layout_constraintEnd_toEndOf="@+id/end"
+        app:layout_constraintTop_toTopOf="@+id/cServiceloungeneedhintimg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cServiceloungedatelayout"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/serviceshape"
+        app:layout_constraintEnd_toStartOf="@+id/center"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/cServiceloungeneedhint" >
+
+        <ImageView
+            android:id="@+id/cSeviceloungedatepicker"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_calendar_1x"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/cSeviceloungedatepickerCenterview"
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cSeviceloungedatepicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cSeviceloungedatepickertextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Service Date"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/cSeviceloungedatepickerCenterview"
+            app:layout_constraintTop_toTopOf="@+id/cSeviceloungedatepickerCenterview" />
+
+        <EditText
+            android:id="@+id/cSeviceloungedatepickeredittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cSeviceloungedatepickertextview"
+            app:layout_constraintTop_toBottomOf="@+id/cSeviceloungedatepickertextview"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cServiceloungetimelayout"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/serviceshape"
+        app:layout_constraintBottom_toBottomOf="@+id/cServiceloungedatelayout"
+        app:layout_constraintEnd_toStartOf="@+id/end"
+        app:layout_constraintStart_toStartOf="@+id/center"
+        app:layout_constraintTop_toTopOf="@+id/cServiceloungedatelayout" >
+
+        <ImageView
+            android:id="@+id/cServiceloungetimepicker"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_time_1x"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/cServiceloungetimeCenterview"
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="@color/view"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cServiceloungetimepicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cServiceloungetimetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Avail Time"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/cServiceloungetimeCenterview"
+            app:layout_constraintTop_toTopOf="@+id/cServiceloungetimeCenterview" />
+
+        <EditText
+            android:id="@+id/cServiceloungetimeedittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cServiceloungetimeCenterview"
+            app:layout_constraintTop_toBottomOf="@+id/cServiceloungetimetextview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cServiceloungeslot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Choose Slot"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toBottomOf="@+id/cServiceloungedatelayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cServiceloungeslotrecycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/end"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/cServiceloungeslot" />
+
+        <ImageView
+            android:id="@+id/cServiceloungecancelimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/cServiceloungeslotrecycler"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintEnd_toEndOf="@id/end"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/aServiceloungetermslayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toBottomOf="@+id/cServiceloungecancelimage">
+
+            <CheckBox
+                android:id="@+id/aServiceloungecheckbox"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/checkbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/aServiceloungeagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="I agree to the"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/aServiceloungecheckbox"
+                app:layout_constraintStart_toEndOf="@+id/aServiceloungecheckbox" />
+
+            <TextView
+                android:id="@+id/aServiceloungeterms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Terms And Conditions,"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/aServiceloungeagree"
+                app:layout_constraintStart_toEndOf="@+id/aServiceloungeagree" />
+
+            <TextView
+                android:id="@+id/aServiceloungepolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/aServiceloungeterms"
+                app:layout_constraintStart_toEndOf="@+id/aServiceloungeterms" />
+
+            <TextView
+                android:id="@+id/aServiceloungeand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="and"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/aServiceloungepolicy"
+                app:layout_constraintStart_toEndOf="@+id/aServiceloungepolicy" />
+
+            <TextView
+                android:id="@+id/aServiceloungecancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Cancellation Policy"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/aServiceloungeagree"
+                app:layout_constraintTop_toBottomOf="@+id/aServiceloungeagree" />
+
+            <TextView
+                android:id="@+id/aServiceloungepolicyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="of Prannam"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/aServiceloungecancel"
+                app:layout_constraintStart_toEndOf="@+id/aServiceloungecancel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bBookservice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/floating"
+            android:layout_marginTop="20dp"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/end"
+            app:layout_constraintStart_toStartOf="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/aServiceloungetermslayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

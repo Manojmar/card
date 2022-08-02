@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="165dp"
+        android:layout_height="210dp"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sFlowercardlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sFlowercardimg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/one"
+                app:layout_constraintBottom_toBottomOf="@id/center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="8dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="10dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="10dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mixed Tulip Bouquet"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/end"
+                app:layout_constraintStart_toStartOf="@+id/start"
+                app:layout_constraintTop_toTopOf="@+id/center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="₹ 350"
+                app:layout_constraintStart_toStartOf="@+id/start"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+            <View
+                android:id="@+id/cSevicedatepickerCenterview"
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="@color/view"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/text3"
+                app:layout_constraintStart_toEndOf="@+id/text3"
+                app:layout_constraintTop_toTopOf="@+id/text3" />
+
+            <TextView
+                android:id="@+id/cCardearn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Earn"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_coin_1x"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text3"
+                app:layout_constraintStart_toEndOf="@+id/cSevicedatepickerCenterview" />
+
+            <TextView
+                android:id="@+id/cCardmilescount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="10 miles"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cCardearn"
+                app:layout_constraintStart_toEndOf="@id/cCardearn"
+                app:layout_constraintTop_toTopOf="@+id/cCardearn" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cServicechildcountadd"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/countshape"
+                android:drawableStart="@drawable/ic_add_1x"
+                app:layout_constraintBottom_toTopOf="@+id/bottom"
+                app:layout_constraintEnd_toStartOf="@+id/end" />
+
+            <TextView
+                android:id="@+id/Servicechildcountshow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottom"
+                app:layout_constraintEnd_toStartOf="@+id/cServicechildcountadd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cServicechildcountminus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/countshape"
+                android:drawableEnd="@drawable/ic_minus_1x"
+                app:layout_constraintBottom_toTopOf="@+id/bottom"
+                app:layout_constraintEnd_toStartOf="@+id/Servicechildcountshow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
